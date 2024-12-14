@@ -150,3 +150,36 @@ Communication Service //localhost:3007
     - Get All Communications /comms
     - Get Communications by Ticket Id /comms/:id
 
+
+System Flow
+    - Create Accounts
+        - customer account
+        - supplier account
+        - support account
+
+    - Add Product
+    
+    - Order Products
+        - make an order, using the product id
+        - supplier id should only be users that has the user_type "supplier"
+        - products go to inventory after ordering
+    
+    - Sales
+        - make a sale
+        - sale is invalid if:
+            - user is non-existent
+            - quantity of sale exceeds quantity in the inventory
+        - total price is directly reflected
+        - updating of sale also updates the total price, and inventory quantity
+
+    Tickets
+        - tickets need to be requested first, where support_id is null, status is pending, as it still needs checking, and priority is just tbd. 
+        - creating tickets is just an update of the ticket. 
+            - support_id is inputted by a support account
+            - status is set to open
+            - priority is based on the subject and description        
+    
+    Communication   
+        - Make a communication
+        - the id of the sender is inputted, be it user or support id
+        - if user_id or support_id is neither in the ticket, the communication is not sent

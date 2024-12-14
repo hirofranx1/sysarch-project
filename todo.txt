@@ -1,0 +1,19 @@
+To do
+
+sales service
+    - add sales
+        - should deduct inventory count
+        - total price should be applied
+        - get user id
+        - display quantity
+    - update sales
+        - can update only quantity
+        - apply logic to inventory quantity
+            - additional function
+                - change product
+                - update inventory
+        - update price
+    - delete sales
+        - return deleted quantity?
+    - get sales by id
+    - get all sales

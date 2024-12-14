@@ -117,6 +117,14 @@ app.post('/login', async (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
+    //json data
+    // {
+    //      "email": "john@gmail.com",
+    //      "password": "john123"
+    // }
+
+
+
     try {
         const user = await User.findOne({ email: email });
         if (user.password === password) {
